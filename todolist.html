@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./todolist.css">
+    <script src="./todolist.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div class="titre">
+            <h1>My to do list...</h1>
+        </div>
+    </nav>
+<div class="newtache">
+<h3>ENREGISTRER UNE NOUVELLE TACHE</h3>
+       <form action=""> 
+        <input type="text" class="info" placeholder="Nouvelle Tâche" id="info" onfocus="oblig()" onblur="oblig()" onkeyup="oblig()">
+        <input type="date" class="date" id="date" >
+        <input type="submit" onclick="" value="ENREGISTRER" id="btnEnr" class="btnEnregistrer" disabled="disabled">
+    </form>
+    </div>
+        <div id="list" class="list">
+            <h2> TÂCHES À FAIRE</h2>
+          <div>
+            <ul id="tache"></ul>  
+    </div>
+</body>
+</html>
