@@ -59,11 +59,15 @@ h3 {
 .btnEnregistrer {
     margin-top: 1vw;
     padding: 1vh;
+    opacity: 60%;
     border: none;
     border-radius: 3vw;
     box-shadow: 2px 2px 1px black;
     background-color: rgb(142, 208, 208);
 
+}
+.btnEnregistrer:hover{
+    opacity: 100%;
 }
 
 .date {
@@ -84,6 +88,7 @@ h3 {
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
     padding-bottom: 1vw;
+    
     
 }
 
@@ -107,6 +112,8 @@ h2 {
 .secdivdate {
     background-color: rgb(232, 232, 232);
     padding: 1vh;
+    width: 30vw;
+    margin: auto;
     text-align: center;
     border-radius: 19px;
     box-shadow: 2px 2px 1px black;
@@ -124,17 +131,23 @@ h2 {
     animation: ;
 
 }
+.btnSup:hover{
+    opacity: 100%;
+}
 
 #tache li { 
-    margin-right: 1vw;
+   
+    margin-right: 3vw;
     margin-bottom: 2vh;
     font-family: cursive;
+    border: double white;
     background-color: rgba(207, 213, 213, 0.989);
     box-shadow: 2px 2px 1px black;
     border-radius: 2vh;
     animation: fadeInAnimation ease 4s; 
 animation-fill-mode: forwards; 
 animation-iteration-count: 1; 
+list-style: none;
 } 
 @keyframes fadeInAnimation { 
 0% { 
@@ -148,15 +161,28 @@ opacity: 1;
 .modif {
     background-color: rgba(227, 200, 44, 0.445);
     opacity: 75%;
-    width: auto;
+       width: auto;
     border-radius: 22px;
     border: none;
     box-shadow: 2px 2px 1px black;
     justify-self: right;
+}
+.modif:hover{
+    opacity: 100%;
+    
 }
 
 .inputmodif {
     border-radius: 30px;
     background-color: rgba(251, 250, 249, 0.504);
 
+}
+
+
+/* responsive dit telephone */
+@media screen and (   max-width: 425px) {
+
+    .newtache{
+        width: auto;
+    }
 }

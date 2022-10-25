@@ -6,7 +6,7 @@
 let tache = document.querySelector("#tache")
 let info = document.querySelector("#info")
 let date = document.querySelector("#date")
- 
+let time = document.querySelector("#heure") 
 function oblig(){
     if(info.value !=""){
         btnEnr.disabled = ""
@@ -24,7 +24,8 @@ btnEnr.addEventListener("click", function (e) { //creer la fonction click de mon
     
     let secDiv = document.createElement('div') // Ajout de la date
     secDiv.classList.add("secdivdate")
-    secDiv.textContent = date.value
+    secDiv.textContent = date.value + " "+ "à" + " " + time.value
+    
     newT.appendChild(secDiv)
 
     let firstDiv = document.createElement('div') // Ajout du texte ecrit dans la nouvelle tache
