@@ -43,22 +43,22 @@ btnEnr.addEventListener("click", function (e) { //creer la fonction click de mon
     newT.appendChild(modif)
     modif.addEventListener("click", (e) => {
         
-        let textmodif = document.createElement("input")
-        textmodif.classList.add("inputmodif")
-        newT.appendChild(textmodif)
-        console.log(newT.childElementCount )
-    
-        let butEnr2 = document.createElement("button")
-        butEnr2.textContent = "Enregistrer"
-        newT.appendChild(butEnr2)
+let textmodif = document.createElement("input")
+textmodif.classList.add("inputmodif")
+textmodif.textContent = "Modifier le texte"
+newT.appendChild(textmodif)
+let butEnr2 = document.createElement("button")
+butEnr2.textContent = "Enregistrer"
+newT.appendChild(butEnr2)
+
+}
 butEnr2.addEventListener("click", (e) => {
     firstDiv.textContent = textmodif.value;
-    
     butEnr2.remove();
     textmodif.remove();
 })
 
-
+        
     })
     //Bouton supprimer
     //On crée le bouton :
