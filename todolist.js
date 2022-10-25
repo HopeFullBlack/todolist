@@ -51,7 +51,7 @@ let butEnr2 = document.createElement("button")
 butEnr2.textContent = "Enregistrer"
 newT.appendChild(butEnr2)
 
-}
+
 butEnr2.addEventListener("click", (e) => {
     firstDiv.textContent = textmodif.value;
     butEnr2.remove();
