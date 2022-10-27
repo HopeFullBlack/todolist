@@ -43,22 +43,30 @@ btnEnr.addEventListener("click", function (e) { //creer la fonction click de mon
     modif.classList.add("modif")
     newT.appendChild(modif)
     modif.addEventListener("click", (e) => {
-        
+if (e.target.parentElement.childNodes.length < 6) {     
 let textmodif = document.createElement("input")
 textmodif.classList.add("inputmodif")
 textmodif.textContent = "Modifier le texte"
 newT.appendChild(textmodif)
+
+
 let butEnr2 = document.createElement("button")
 butEnr2.textContent = "Enregistrer"
 newT.appendChild(butEnr2)
 
 
 butEnr2.addEventListener("click", (e) => {
-    firstDiv.textContent = textmodif.value;
-    butEnr2.remove();
-    textmodif.remove();
-})
+    //forcer le remplissage de la case texte sinon alert
+    if (textmodif.value != ""){
+        firstDiv.textContent = textmodif.value;
 
+        butEnr2.remove();
+        textmodif.remove();
+    }else {
+        alert("Remplir le champ")
+    }
+    })
+}
         
     })
     //Bouton supprimer
