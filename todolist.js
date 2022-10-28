@@ -52,24 +52,26 @@ newT.appendChild(textmodif)
 
 let butEnr2 = document.createElement("button")
 butEnr2.textContent = "Enregistrer"
+
+butEnr2.disabled = true
+textmodif.onkeydown=(ev)=>{
+    if(textmodif.value!==""){
+        butEnr2.disabled = false
+    }
+}
+
 newT.appendChild(butEnr2)
 
 
 butEnr2.addEventListener("click", (e) => {
-    //forcer le remplissage de la case texte sinon alert
-    if (textmodif.value != ""){
-        firstDiv.textContent = textmodif.value;
-
+    
         butEnr2.remove();
         textmodif.remove();
-    }else {
-        alert("Remplir le champ")
-    }
-    })
+    } 
+)
 }
-        
-    })
-    //Bouton supprimer
+
+})    //Bouton supprimer
     //On crée le bouton :
     let btnSup = document.createElement("button")
     //on ajoute sa fonction :
